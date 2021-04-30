@@ -1,0 +1,60 @@
+.wrapperSidebar {
+  position: sticky;
+  left: 25;
+  top: calc(50% - 75px);
+  background-color: var(--dark);
+  width: 150px;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.buttonSidebar {
+  display: block;
+  position: relative;
+  max-width: 262px;
+  background-color: var(--citrus);
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.buttonSidebar::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: var(--dark);
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease-out;
+}
+
+.buttonSidebar:hover::before {
+  transform: scale(12);
+}
+.buttonSidebar:hover p {
+  color: var(--citrus);
+}
+
+.corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background-color: var(--dark);
+  border-radius: 0 4px 0 32px;
+}

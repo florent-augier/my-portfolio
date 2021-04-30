@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "BalsamiqSans-700";
+  src: url("./fonts/balsamiq/BalsamiqSans-700.ttf");
+}
+@font-face {
+  font-family: "BalsamiqSans-700italic";
+  src: url("./fonts/balsamiq/BalsamiqSans-700italic.ttf");
+}
+@font-face {
+  font-family: "BalsamiqSans-italic";
+  src: url("./fonts/balsamiq/BalsamiqSans-italic.ttf");
+}
+@font-face {
+  font-family: "BalsamiqSans-regular";
+  src: url("./fonts/balsamiq/BalsamiqSans-regular.ttf");
+}
+
+/* Archivo font */
+@font-face {
+  font-family: "Archivo-100";
+  src: url("./fonts/archivo/Archivo-100.ttf");
+}
+@font-face {
+  font-family: "Archivo-100italic";
+  src: url("./fonts/archivo/Archivo-100italic.ttf");
+}
+@font-face {
+  font-family: "Archivo-300";
+  src: url("./fonts/archivo/Archivo-300.ttf");
+}
+@font-face {
+  font-family: "Archivo-300italic";
+  src: url("./fonts/archivo/Archivo-300italic.ttf");
+}
+@font-face {
+  font-family: "Archivo-500";
+  src: url("./fonts/archivo/Archivo-500.ttf");
+}
+@font-face {
+  font-family: "Archivo-500italic";
+  src: url("./fonts/archivo/Archivo-500italic.ttf");
+}
+@font-face {
+  font-family: "Archivo-700";
+  src: url("./fonts/archivo/Archivo-700.ttf");
+}
+@font-face {
+  font-family: "Archivo-700italic";
+  src: url("./fonts/archivo/Archivo-700italic.ttf");
+}
+@font-face {
+  font-family: "Archivo-900";
+  src: url("./fonts/archivo/Archivo-900.ttf");
+}
+@font-face {
+  font-family: "Archivo-900";
+  src: url("./fonts/archivo/Archivo-900italic.ttf");
+}
+@font-face {
+  font-family: "Archivo-italic";
+  src: url("./fonts/archivo/Archivo-italic.ttf");
+}
+@font-face {
+  font-family: "Archivo-regular";
+  src: url("./fonts/archivo/Archivo-regular.ttf");
+}
+
+html {
+  min-height: 100vh;
+  background-color: var(--dark);
+}
+
+#root {
+  background-color: var(--dark);
+  min-height: 100vh;
+  --dark: #282c34;
+  --citrus: #bfff00;
+}

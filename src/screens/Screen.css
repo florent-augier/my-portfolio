@@ -1,0 +1,13 @@
+.bodyScreen {
+  min-height: 100vw;
+  color: var(--citrus);
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+}
+
+.headerScreen {
+  font-family: "BalsamiqSans-regular";
+  font-size: 48px;
+}
