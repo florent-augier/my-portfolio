@@ -30,7 +30,7 @@ export default function Navbar() {
       <nav>
         <ul>
           <li onClick={(e) => goToAbout(e)}>
-            A propos
+            Mon parcours
             <span></span>
             <span></span>
             <span></span>

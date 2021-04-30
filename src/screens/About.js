@@ -87,9 +87,14 @@ export default function About() {
           <p>
             La chance et le travail ont fait de moi un athlète qui visait
             toujours plus haut. Je me suis hissé dans le{" "}
-            <b className="textBold">top 16</b> lors d'un championnat de France
-            de natation sur le <b className="textBold">100 mètres nage libre</b>
-            . J'ai également honoré les couleurs de la France dans un sport
+            <b className="textBold">
+              top 16 lors d'un championnat de France de natation sur le 100
+              mètres nage libre
+            </b>
+            .
+          </p>
+          <p>
+            J'ai également honoré les couleurs de la France dans un sport
             beaucoup moins médiatisé mais avec beaucoup de valeurs:
             <b className="textBold"> le sauvetage</b>. Quelques{" "}
             <b className="textBold">podiums européens</b> dans la catégorie
@@ -101,7 +106,7 @@ export default function About() {
       {/* Section présent */}
       <div className="sectionScreen" ref={presentRef}>
         <div className="headerSectionScreen">
-          <h2>Mon passé :</h2>
+          <h2>Aujourd'hui :</h2>
           <button
             className="buttonSection"
             onClick={() => toggleColorTheme(presentRef)}
