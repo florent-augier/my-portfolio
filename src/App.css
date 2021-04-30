@@ -75,4 +75,10 @@ html {
   min-height: 100vh;
   --dark: #282c34;
   --citrus: #bfff00;
+  --pink: #ff00bf;
+  --blue: #4000ff;
+  --orange: #ffc000;
+  --green: #3fff00;
+  --violet: #c000ff;
+  --electric: #00bfff;
 }

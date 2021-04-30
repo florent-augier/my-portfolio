@@ -1,7 +1,7 @@
 .wrapperSidebar {
   position: sticky;
   left: 25;
-  top: calc(50% - 75px);
+  top: calc(50% - 200px);
   background-color: var(--dark);
   width: 150px;
   height: max-content;
@@ -21,6 +21,7 @@
   text-decoration: none;
   z-index: 0;
   overflow: hidden;
+  color: var(--dark);
 }
 
 .buttonSidebar::before {
@@ -29,7 +30,7 @@
   z-index: -1;
   top: -16px;
   right: -16px;
-  background: var(--dark);
+  background: var(--orange);
   height: 32px;
   width: 32px;
   border-radius: 32px;
@@ -42,7 +43,11 @@
   transform: scale(12);
 }
 .buttonSidebar:hover p {
-  color: var(--citrus);
+  color: var(--pink);
+}
+
+.buttonSidebar:hover .corner {
+  background-color: var(--orange);
 }
 
 .corner {
@@ -55,6 +60,6 @@
   overflow: hidden;
   top: 0;
   right: 0;
-  background-color: var(--dark);
+  background-color: var(--orange);
   border-radius: 0 4px 0 32px;
 }
