@@ -1,19 +1,72 @@
 .bodyScreen {
   min-height: 100vw;
   color: var(--citrus);
+  width: 60%;
+  margin: auto;
+}
+
+.avatarContainer {
   display: flex;
   justify-content: center;
-  width: 80%;
-  margin: auto;
-  top: 50;
+  align-items: center;
+}
+.avatar {
+  background-image: url("./../images/florent.jpg");
+  height: 300px;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  border-radius: 50%;
+  border: 2px solid var(--blue);
+  margin-bottom: 60px;
 }
 
 .headerScreen {
-  font-family: "Archivo-700";
+  font-family: "BalsamiqSans-regular";
   font-size: 48px;
   height: 150px;
+  text-align: center;
+  color: var(--electric);
+  text-decoration: underline;
 }
 
+.sectionScreen {
+  margin: auto;
+  border: 2px solid var(--violet);
+  border-radius: 12px;
+  color: var(--orange);
+  letter-spacing: 4px;
+  font-size: 24px;
+  margin-top: 150px;
+}
+.headerSectionScreen {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Archivo-500";
+  margin-left: 24px;
+}
+
+.buttonSection {
+  text-decoration: none;
+  margin: 6px;
+  background-color: var(--pink);
+  border-radius: 12px;
+  font-family: "BalsamiqSans-italic";
+  color: var(--citrus);
+  border: 2px solid var(--dark);
+}
+
+.bodySectionScreen {
+  margin: 36px;
+  font-family: "Archivo-300italic";
+  letter-spacing: 2px;
+}
+
+.textBold {
+  color: var(--pink);
+  font-weight: bolder;
+}
 @media (max-width: 600px) {
   .headerScreen {
     font-size: 18px;

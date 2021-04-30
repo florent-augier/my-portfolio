@@ -2,6 +2,7 @@ nav {
   background-color: var(--dark);
   height: 150px;
   color: var(--citrus);
+  margin-bottom: 150px;
 }
 nav ul {
   display: flex;
@@ -16,7 +17,7 @@ nav ul {
 nav ul li {
   width: 12em;
   height: 3em;
-  border: 0.3em solid var(--citrus);
+  border: 0.3em solid var(--pink);
   text-align: center;
   line-height: 3em;
   text-transform: uppercase;
@@ -30,14 +31,14 @@ nav ul li {
 }
 
 nav ul li:hover {
-  color: #282c34;
+  color: var(--pink);
 }
 
 nav ul li span {
   position: absolute;
   width: 25%;
   height: 100%;
-  background-color: var(--citrus);
+  background-color: var(--blue);
   transform: translateY(150%);
   border-radius: 50%;
   left: calc((var(--n) - 1) * 25%);
