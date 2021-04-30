@@ -4,7 +4,7 @@ import "./Screen.css";
 export default function About() {
   return (
     <div className="bodyScreen">
-      <h1 className="headerScreen">A propos de moi</h1>
+      <h1 className="headerScreen">A PROPOS DE MOI</h1>
     </div>
   );
 }

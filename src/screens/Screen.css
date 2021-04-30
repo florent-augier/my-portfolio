@@ -5,9 +5,17 @@
   justify-content: center;
   width: 80%;
   margin: auto;
+  top: 50;
 }
 
 .headerScreen {
-  font-family: "BalsamiqSans-regular";
+  font-family: "Archivo-700";
   font-size: 48px;
+  height: 150px;
+}
+
+@media (max-width: 600px) {
+  .headerScreen {
+    font-size: 18px;
+  }
 }

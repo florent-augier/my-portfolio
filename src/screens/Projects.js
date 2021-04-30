@@ -4,7 +4,7 @@ import "./Screen.css";
 export default function Projects() {
   return (
     <div className="bodyScreen">
-      <h1 className="headerScreen">Mes projets</h1>
+      <h1 className="headerScreen">MES PROJETS</h1>
     </div>
   );
 }
