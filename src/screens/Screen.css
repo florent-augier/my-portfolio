@@ -154,6 +154,75 @@ img {
   opacity: 0.5;
   transform: translateX(30%); /*100%*/
 }
+
+/* ============================= Contact ================================  */
+
+.btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+}
+
+.btn-two {
+  color: black;
+  font-weight: bolder;
+  transition: all 0.5s;
+  position: relative;
+}
+.btn-two span {
+  transition: all 1.5s;
+
+  z-index: 2;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.btn-two::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid var(--citrus);
+  background-color: var(--pink);
+}
+.btn-two::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid var(--pink);
+  background-color: var(--blue);
+}
+
+.btn-two:hover span {
+  letter-spacing: 16px;
+  color: var(--pink);
+  top: 50px;
+}
+
+.btn-two:hover::before {
+  transform: rotate(-45deg);
+  background-color: rgba(255, 255, 255, 0);
+}
+.btn-two:hover::after {
+  transform: rotate(45deg);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+/* ============================== End ===================================  */
+
 @media (max-width: 900px) {
   .bodyScreen {
     width: 90%;
