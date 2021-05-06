@@ -1,32 +1,43 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Screen.css";
 
+import useWindowSize from "../helpers/WindowSize";
+
 import forky from "./../images/forky.png";
 import forkyPhone from "./../images/forky-phone.jpg";
 
+import "@lottiefiles/lottie-player";
+
 export default function Projects() {
+  const [width] = useWindowSize();
+
   const forkyRef = useRef(null);
   const forkyPhoneRef = useRef(null);
 
   const [forkyIsTouched, setForkyIsTouched] = useState(false);
   const [forkyPhoneIsTouched, setForkyPhoneIsTouched] = useState(false);
 
+  const [forkySwipeIsVisible, setForkySwipeIsVisible] = useState(false);
+  const [forkyPhoneSwipeIsVisible, setForkyPhoneSwipeIsVisible] = useState(
+    false
+  );
+
   const touchCard = (e, ref) => {
     console.log(e.target.tagName);
     if (
       e.type === "touchmove" &&
       ref === forkyRef &&
-      e.target.tagName === "IMG"
+      (e.target.tagName === "IMG" || e.target.tagName === "LOTTIE-PLAYER")
     ) {
-      console.log("hello je bouge");
       setForkyIsTouched(!forkyIsTouched);
+      setForkySwipeIsVisible(!forkySwipeIsVisible);
     } else if (
       e.type === "touchmove" &&
       ref === forkyPhoneRef &&
       e.target.tagName === "IMG"
     ) {
-      console.log("hello je bouge aussi");
       setForkyPhoneIsTouched(!forkyPhoneIsTouched);
+      setForkyPhoneSwipeIsVisible(!forkyPhoneSwipeIsVisible);
     }
   };
 
@@ -64,6 +75,13 @@ export default function Projects() {
           <h2>Forky</h2>
         </div>
 
+        {width <= 480 && (
+          <p style={{ fontSize: "12px", textAlign: "center" }}>
+            Toucher l'image pour accéder au lien ou swiper comme le montre
+            l'animation pour afficher les informations
+          </p>
+        )}
+
         <a
           href="https://forky-app.herokuapp.com/"
           onTouchMove={(e) => touchCard(e, forkyRef)}
@@ -72,10 +90,32 @@ export default function Projects() {
         >
           <div className="bodySectionScreen">
             <div className="wrapperCard">
+              {width <= 480 && !forkySwipeIsVisible && (
+                <div
+                  className="swiper"
+                  style={{ position: "absolute", zIndex: "5" }}
+                >
+                  <lottie-player
+                    src="https://assets1.lottiefiles.com/datafiles/8rPPZlJdGjchPU2/data.json"
+                    style={{
+                      background: "transparent",
+                      float: "left",
+                      left: "50%",
+                      maxWidth: width >= 480 ? "300px" : "150px",
+                      maxHeight: width >= 480 ? "120px" : "60px",
+                    }}
+                    speed="1"
+                    loop
+                    autoplay
+                  ></lottie-player>
+                </div>
+              )}
+
               <div className="card">
                 <div className="image">
-                  <img src={forky} alt="forky" />
+                  <img src={forky} alt="forky"></img>
                 </div>
+
                 <div className="details" ref={forkyRef}>
                   <div className="details-text">
                     <h3>C'est quoi ? </h3>
@@ -113,6 +153,28 @@ export default function Projects() {
         >
           <div className="bodySectionScreen">
             <div className="wrapperCard">
+              {width <= 480 && !forkyPhoneIsTouched && (
+                <div
+                  className="swiper"
+                  style={{ position: "absolute", zIndex: "5" }}
+                >
+                  <lottie-player
+                    src="https://assets1.lottiefiles.com/datafiles/8rPPZlJdGjchPU2/data.json"
+                    style={{
+                      background: "transparent",
+                      float: "left",
+                      left: "50%",
+                      top: "50%",
+                      maxWidth: width >= 480 ? "300px" : "150px",
+                      maxHeight: width >= 480 ? "120px" : "60px",
+                    }}
+                    speed="1"
+                    loop
+                    autoplay
+                  ></lottie-player>
+                </div>
+              )}
+
               <div className="card">
                 <div className="image">
                   <img src={forkyPhone} alt="forky-phone" />
