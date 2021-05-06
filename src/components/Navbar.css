@@ -3,6 +3,7 @@ nav {
   height: 150px;
   color: var(--citrus);
   margin-bottom: 150px;
+  z-index: 1000;
 }
 nav ul {
   display: flex;
@@ -64,10 +65,18 @@ nav ul li span:nth-child(4) {
   --n: 4;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   nav {
     position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    left: 0;
+    height: max-content;
+    margin-bottom: 50;
   }
+}
+
+@media (max-width: 600px) {
   nav ul {
     align-items: flex-start;
   }
@@ -75,5 +84,15 @@ nav ul li span:nth-child(4) {
     font-family: "Archivo-300";
     font-size: 12px;
     font-weight: inherit;
+    width: 100%;
+  }
+  .headerSectionScreen {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 450px) {
+  nav ul li {
+    font-size: 8px;
   }
 }

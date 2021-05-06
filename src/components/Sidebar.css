@@ -65,27 +65,8 @@
   border-radius: 0 4px 0 32px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .wrapperSidebar {
-    width: 30px;
     display: none;
-  }
-  .buttonSidebar {
-    position: sticky;
-    display: flex;
-    flex-direction: column;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    align-self: center;
-  }
-  .buttonSidebar:hover::before {
-    transform: scale(16);
-  }
-  p {
-    font-size: 12px;
-  }
-  .corner {
-    width: 16px;
-    height: 16px;
   }
 }

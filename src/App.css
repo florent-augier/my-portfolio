@@ -76,6 +76,7 @@ body {
 #root {
   background-color: var(--dark);
   min-height: 100vh;
+  padding-bottom: 50px;
   --dark: #282c34;
   --citrus: #bfff00;
   --pink: #ff00bf;
