@@ -65,24 +65,8 @@
   src: url("./fonts/archivo/Archivo-regular.ttf");
 }
 
-html {
-  min-height: 100vh;
-}
-body {
-  min-height: 100vh;
-  background-color: var(--dark);
-}
-
 #root {
   background-color: var(--dark);
-  min-height: 100vh;
+  min-height: 100%;
   padding-bottom: 50px;
-  --dark: #282c34;
-  --citrus: #bfff00;
-  --pink: #ff00bf;
-  --blue: #4000ff;
-  --orange: #ffc000;
-  --green: #3fff00;
-  --violet: #c000ff;
-  --electric: #00bfff;
 }

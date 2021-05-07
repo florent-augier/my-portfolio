@@ -1,2 +1,3 @@
-#wrapperBody {
+.wrapperBody {
+  background-color: var(--dark);
 }

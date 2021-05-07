@@ -4,6 +4,7 @@ nav {
   color: var(--citrus);
   margin-bottom: 150px;
   z-index: 1000;
+  border-bottom: 1px solid var(--citrus);
 }
 nav ul {
   display: flex;
