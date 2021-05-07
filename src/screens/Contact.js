@@ -23,21 +23,45 @@ export default function Contact() {
         <div className="bodySectionScreen">
           {/* Mes liens*/}
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <div
-              className="btn btn-two"
-              onMouseEnter={(e) => jumpLetters(e)}
-              onMouseLeave={(e) => jumpLetters(e)}
-            >
-              <img
-                src={githubIcon}
-                alt="github-icon"
-                style={{
-                  backgroundColor: "rgba(255, 255, 255, 0)",
-                  zIndex: 1000,
-                }}
-              />
-              <span ref={githubText}>GITHUB</span>
-            </div>
+            <a href="https://github.com/florent-augier">
+              <div
+                className="btn btn-two"
+                onMouseEnter={(e) => jumpLetters(e)}
+                onMouseLeave={(e) => jumpLetters(e)}
+              >
+                <img
+                  src={githubIcon}
+                  alt="github-icon"
+                  style={{
+                    backgroundColor: "rgba(255, 255, 255, 0)",
+                    zIndex: 1000,
+                  }}
+                />
+                <span ref={githubText}>GITHUB</span>
+              </div>
+            </a>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignContent: "center",
+              marginTop: "200px",
+            }}
+          >
+            Mail:
+            <p style={{ marginTop: "50px" }}>florent.sauvetage@gmail.com</p>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignContent: "center",
+              marginTop: "200px",
+            }}
+          >
+            Téléphone:
+            <p style={{ marginTop: "50px" }}>06.64.16.21.04</p>
           </div>
         </div>
       </div>

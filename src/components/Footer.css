@@ -26,3 +26,13 @@
   justify-content: center;
   color: var(--orange);
 }
+
+@media (max-width: 480px) {
+  .gridFooter {
+    grid-template-columns: auto;
+    margin-bottom: 20px;
+  }
+  .gridItem {
+    padding: 10px;
+  }
+}

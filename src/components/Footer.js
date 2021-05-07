@@ -25,7 +25,6 @@ export default function Footer() {
           Remerciements:
           <ul>
             <li>
-              {" "}
               <a
                 href="https://www.lacapsule.academy/"
                 style={{ color: "var(--blue)" }}
@@ -34,7 +33,6 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              {" "}
               <a
                 href="https://www.thehackingproject.org/"
                 style={{ color: "var(--blue)" }}
