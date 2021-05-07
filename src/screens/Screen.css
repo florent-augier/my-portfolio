@@ -132,6 +132,7 @@ img {
   width: 50%;
   transform-origin: left;
   transform: rotateY(90deg);
+  overflow: scroll;
 }
 
 .details-text {
