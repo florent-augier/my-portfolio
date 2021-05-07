@@ -14,3 +14,15 @@
   justify-content: center;
   border-top: 1px solid var(--citrus);
 }
+
+.gridFooter {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.gridItem {
+  display: flex;
+  justify-content: center;
+  color: var(--orange);
+}
