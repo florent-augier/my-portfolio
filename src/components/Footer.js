@@ -6,30 +6,31 @@ export default function Footer() {
     <div className="wrapperFooter">
       <div className="gridFooter">
         <div className="gridItem">
-          <div>
-            Icons made by{" "}
-            <a
-              href="https://www.flaticon.com/authors/pixel-perfect"
-              title="Pixel perfect"
-            >
-              Pixel perfect
-            </a>{" "}
-            from{" "}
-            <a href="https://www.flaticon.com/" title="Flaticon">
-              www.flaticon.com
-            </a>
-          </div>
+          Icons made by{" "}
+          <a
+            href="https://www.flaticon.com/authors/pixel-perfect"
+            title="Pixel perfect"
+          >
+            Pixel perfect
+          </a>{" "}
+          from{" "}
+          <a href="https://www.flaticon.com/" title="Flaticon">
+            www.flaticon.com
+          </a>
         </div>
         <div className="gridItem">@ Florent Augier 2021</div>
         <div className="gridItem">
-          Remerciements:
+          <div>
+            <p>Remerciements:</p>
+          </div>
+          <div></div>
           <ul>
             <li>
               <a
                 href="https://www.lacapsule.academy/"
                 style={{ color: "var(--blue)" }}
               >
-                @La Capsule
+                La Capsule
               </a>
             </li>
             <li>

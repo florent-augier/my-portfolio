@@ -41,27 +41,17 @@ export default function Contact() {
               </div>
             </a>
           </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignContent: "center",
-              marginTop: "200px",
-            }}
-          >
+          <div className="emailAndTel">
             Mail:
-            <p style={{ marginTop: "50px" }}>florent.sauvetage@gmail.com</p>
+            <p style={{ marginTop: "50px", color: "var(--pink)" }}>
+              florent.sauvetage@gmail.com
+            </p>
           </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignContent: "center",
-              marginTop: "200px",
-            }}
-          >
+          <div className="emailAndTel">
             Téléphone:
-            <p style={{ marginTop: "50px" }}>06.64.16.21.04</p>
+            <p style={{ marginTop: "50px", color: "var(--pink)" }}>
+              06.64.16.21.04
+            </p>
           </div>
         </div>
       </div>

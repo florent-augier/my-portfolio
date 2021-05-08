@@ -183,10 +183,6 @@ img {
   top: 0;
 }
 
-.btn-two span .letter {
-  position: relative;
-  left: 50px;
-}
 .btn-two::before {
   content: "";
   position: absolute;
@@ -196,7 +192,7 @@ img {
   height: 100%;
   z-index: 1;
   transition: all 0.5s;
-  border: 1px solid var(--citrus);
+  border: 2px solid var(--citrus);
   background-color: var(--pink);
 }
 .btn-two::after {
@@ -208,7 +204,7 @@ img {
   height: 100%;
   z-index: 1;
   transition: all 0.5s;
-  border: 1px solid var(--pink);
+  border: 2px solid var(--pink);
   background-color: var(--blue);
 }
 
@@ -225,6 +221,14 @@ img {
 .btn-two:hover::after {
   transform: rotate(45deg);
   background-color: rgba(255, 255, 255, 0);
+}
+
+.emailAndTel {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 200px;
+  font-size: 24px;
 }
 
 /* ============================== End ===================================  */
@@ -250,6 +254,9 @@ img {
   }
 
   .details-text p {
+    font-size: 12px;
+  }
+  .emailAndTel {
     font-size: 12px;
   }
 }
