@@ -1,13 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Router, useHistory } from "react-router-dom";
 import "./Navbar.css";
 
 export default function Navbar() {
   let history = useHistory();
-
-  useEffect(() => {
-    console.log(history);
-  });
 
   const goToAbout = (e) => {
     e.preventDefault();

@@ -23,7 +23,6 @@ export default function Projects() {
   );
 
   const touchCard = (e, ref) => {
-    console.log(e.target.tagName);
     if (
       e.type === "touchmove" &&
       ref === forkyRef &&
