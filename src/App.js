@@ -33,6 +33,9 @@ function App() {
         <Route path="/projects">
           <Projects />
         </Route>
+        <Route path="*">
+          <Redirect to="/about" />
+        </Route>
       </Switch>
     </Router>
   );
