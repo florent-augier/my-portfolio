@@ -14,6 +14,10 @@ import Contact from "./screens/Contact";
 import Projects from "./screens/Projects";
 import About from "./screens/About";
 
+function FourOhFour() {
+  return <Redirect to="/" />;
+}
+
 function App() {
   return (
     <Router>
@@ -34,7 +38,7 @@ function App() {
           <Projects />
         </Route>
         <Route path="*">
-          <Redirect to="/about" />
+          <FourOhFour />
         </Route>
       </Switch>
     </Router>
