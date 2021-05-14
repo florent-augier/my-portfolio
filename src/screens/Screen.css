@@ -229,6 +229,56 @@ img {
   align-content: center;
   margin-top: 200px;
   font-size: 24px;
+  flex-direction: column;
+}
+
+.infoContact {
+  display: flex;
+  justify-content: center;
+}
+
+.pContact {
+  width: 10%;
+}
+.inputContact {
+  margin-top: 50px;
+  color: var(--citrus);
+  background-color: var(--pink);
+  font-family: Archivo-500italic;
+  font-size: 16px;
+  border: 2px solid var(--citrus);
+  border-radius: 4px;
+  padding: 4px;
+  margin-inline: 4px;
+  width: 50%;
+  height: 50px;
+  text-align: center;
+}
+
+.buttonContact {
+  margin-top: 50px;
+  color: var(--pink);
+  background-color: "var(--citrus)";
+}
+
+.buttonContact.clicked:focus:before,
+.buttonContact.clicked:before {
+  content: "▼";
+  position: absolute;
+  transform: translateY(-50px) translateX(4px); /* on centre horizontalement  */
+  font-size: 20px;
+  color: var(--pink);
+}
+
+.buttonContact.clicked:focus::after,
+.buttonContact.clicked:after {
+  content: "Copié!";
+  position: absolute;
+  transform: translateY(-78px) translateX(-70%); /* on centre horizontalement  */
+  font-size: 20px;
+  color: var(--pink);
+  border: 2px solid var(--pink);
+  padding: 4px;
 }
 
 /* ============================== End ===================================  */
@@ -265,6 +315,17 @@ img {
   .buttonSection {
     overflow-wrap: normal;
     width: 30%;
+  }
+  .bodySectionScreen {
+    width: 100%;
+    margin: 0;
+  }
+  .emailAndTel {
+    width: 100%;
+  }
+  .inputContact {
+    font-size: 12px;
+    width: 90%;
   }
 }
 

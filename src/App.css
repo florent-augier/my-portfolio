@@ -67,6 +67,6 @@
 
 #root {
   background-color: var(--dark);
-  min-height: 100%;
+  min-height: 100vw;
   padding-bottom: 50px;
 }

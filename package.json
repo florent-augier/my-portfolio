@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@lottiefiles/lottie-player": "^1.0.3",
+    "@mdi/js": "^5.9.55",
+    "@mdi/react": "^1.5.0",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",

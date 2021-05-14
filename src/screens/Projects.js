@@ -6,9 +6,22 @@ import useWindowSize from "../helpers/WindowSize";
 import forky from "./../images/forky.png";
 import forkyPhone from "./../images/forky-phone.jpg";
 
+import githubIcon from "../images/github.svg";
+
 import "@lottiefiles/lottie-player";
 
 export default function Projects() {
+  const githubText = useRef(null);
+
+  const jumpLetters = (e) => {
+    if (e.type === "mouseenter") {
+      githubText.current.style.transition = "all 1s";
+      githubText.current.style.marginTop = "60%";
+    } else if (e.type === "mouseleave") {
+      githubText.current.style.marginTop = "0%";
+    }
+  };
+
   const [width] = useWindowSize();
 
   const forkyRef = useRef(null);
@@ -18,9 +31,8 @@ export default function Projects() {
   const [forkyPhoneIsTouched, setForkyPhoneIsTouched] = useState(false);
 
   const [forkySwipeIsVisible, setForkySwipeIsVisible] = useState(false);
-  const [forkyPhoneSwipeIsVisible, setForkyPhoneSwipeIsVisible] = useState(
-    false
-  );
+  const [forkyPhoneSwipeIsVisible, setForkyPhoneSwipeIsVisible] =
+    useState(false);
 
   const touchCard = (e, ref) => {
     if (
@@ -67,6 +79,33 @@ export default function Projects() {
   return (
     <div className="bodyScreen">
       <h1 className="headerScreen">MES PROJETS</h1>
+
+      {/*GITHUB LINK */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: "200px",
+        }}
+      >
+        <a href="https://github.com/florent-augier">
+          <div
+            className="btn btn-two"
+            onMouseEnter={(e) => jumpLetters(e)}
+            onMouseLeave={(e) => jumpLetters(e)}
+          >
+            <img
+              src={githubIcon}
+              alt="github-icon"
+              style={{
+                backgroundColor: "rgba(255, 255, 255, 0)",
+                zIndex: 1000,
+              }}
+            />
+            <span ref={githubText}>GITHUB</span>
+          </div>
+        </a>
+      </div>
 
       {/* Forky web */}
       <div className="sectionScreen">

@@ -1,18 +1,27 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Screen.css";
 
-import githubIcon from "../images/github.svg";
+import Icon from "@mdi/react";
+import { mdiContentCopy, mdiPhone } from "@mdi/js";
 
 export default function Contact() {
-  const githubText = useRef(null);
+  const emailButton = useRef(null);
 
-  const jumpLetters = (e) => {
-    if (e.type === "mouseenter") {
-      githubText.current.style.transition = "all 1s";
-      githubText.current.style.marginTop = "60%";
-    } else if (e.type === "mouseleave") {
-      githubText.current.style.marginTop = "0%";
+  const [isCLiked, setIsClicked] = useState(false);
+
+  useEffect(() => {
+    if (isCLiked) {
+      emailButton.current.classList.add("clicked");
+      setTimeout(() => {
+        emailButton.current.classList.remove("clicked");
+        setIsClicked(false);
+      }, 2000);
     }
+  }, [isCLiked]);
+
+  const handleClickEmail = (e) => {
+    navigator.clipboard.writeText(e.currentTarget.textContent);
+    setIsClicked(true);
   };
 
   return (
@@ -22,36 +31,53 @@ export default function Contact() {
       <div className="sectionSreen">
         <div className="bodySectionScreen">
           {/* Mes liens*/}
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <a href="https://github.com/florent-augier">
-              <div
-                className="btn btn-two"
-                onMouseEnter={(e) => jumpLetters(e)}
-                onMouseLeave={(e) => jumpLetters(e)}
+
+          <div className="emailAndTel">
+            <p className="pContact">Mail:</p>
+            <div className="infoContact">
+              <input
+                className="inputContact"
+                readOnly
+                defaultValue="florent.sauvetage@gmail.com"
+              ></input>
+              <button
+                ref={emailButton}
+                className="buttonContact"
+                onClick={(e) => handleClickEmail(e)}
               >
-                <img
-                  src={githubIcon}
-                  alt="github-icon"
-                  style={{
-                    backgroundColor: "rgba(255, 255, 255, 0)",
-                    zIndex: 1000,
-                  }}
+                <Icon
+                  path={mdiContentCopy}
+                  title="florent.sauvetage@gmail.com"
+                  size={1}
+                  horizontal
+                  vertical
                 />
-                <span ref={githubText}>GITHUB</span>
-              </div>
-            </a>
+              </button>
+            </div>
           </div>
           <div className="emailAndTel">
-            Mail:
-            <p style={{ marginTop: "50px", color: "var(--pink)" }}>
-              florent.sauvetage@gmail.com
-            </p>
-          </div>
-          <div className="emailAndTel">
-            Téléphone:
-            <p style={{ marginTop: "50px", color: "var(--pink)" }}>
-              06.64.16.21.04
-            </p>
+            <p className="pContact">Téléphone:</p>
+
+            <div className="infoContact">
+              <input
+                readOnly
+                className="inputContact"
+                defaultValue="06 64 16 21 04"
+              ></input>
+
+              <button className="buttonContact">
+                <a href="tel:+33664162104">
+                  <Icon
+                    path={mdiPhone}
+                    title="Appeler le 06 64 16 21 04"
+                    size={1}
+                    horizontal
+                    vertical
+                    color="var(--pink)"
+                  />
+                </a>
+              </button>
+            </div>
           </div>
         </div>
       </div>
