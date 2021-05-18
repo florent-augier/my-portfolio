@@ -259,6 +259,7 @@ img {
   margin-top: 50px;
   color: var(--pink);
   background-color: "var(--citrus)";
+  -webkit-appearance: none;
 }
 
 .buttonContact.clicked:focus:before,
