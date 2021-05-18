@@ -6,7 +6,6 @@ import {
   Switch,
   Route,
   Redirect,
-  Link,
 } from "react-router-dom";
 
 import Sidebar from "./components/Sidebar";
@@ -15,14 +14,16 @@ import Contact from "./screens/Contact";
 import Projects from "./screens/Projects";
 import About from "./screens/About";
 
-function FourOhFour() {
-  return (
-    <div>
-      <h1>Page non trouvée</h1>
-      <Link to="/">Revenir à l'accueil</Link>
-    </div>
-  );
-}
+import FourOhFour from "./screens/FourOhFour";
+
+// function FourOhFour() {
+//   return (
+//     <div>
+//       <h1>Page non trouvée</h1>
+//       <Link to="/">Revenir à l'accueil</Link>
+//     </div>
+//   );
+// }
 
 function App() {
   return (
