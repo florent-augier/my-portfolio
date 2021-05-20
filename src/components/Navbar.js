@@ -2,7 +2,12 @@ import React from "react";
 import { Router, useHistory } from "react-router-dom";
 import "./Navbar.css";
 
+import Video from "./../videos/florentaugier.mp4";
+
+import useWindowSize from "./../helpers/WindowSize";
+
 export default function Navbar() {
+  const [width] = useWindowSize();
   let history = useHistory();
 
   const goToAbout = (e) => {
@@ -25,6 +30,15 @@ export default function Navbar() {
     <Router history={history}>
       <nav>
         <ul>
+          {width >= 650 && (
+            <video
+              src={Video}
+              autoPlay
+              height={width >= 600 ? 125 : 40}
+              width={width >= 600 ? 250 : 85}
+              pl
+            />
+          )}
           <li onClick={(e) => goToAbout(e)}>
             Mon parcours
             <span></span>
