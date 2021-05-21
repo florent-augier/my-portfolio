@@ -31,13 +31,13 @@ export default function Navbar() {
       <nav>
         <ul>
           {width >= 650 && (
-            <video
-              src={Video}
-              autoPlay
-              height={width >= 600 ? 125 : 40}
+            <iframe
               width={width >= 600 ? 250 : 85}
-              pl
-            />
+              height={width >= 600 ? 125 : 40}
+              src={Video}
+              title="logo Florent Augier"
+              style={{ border: "none" }}
+            ></iframe>
           )}
           <li onClick={(e) => goToAbout(e)}>
             Mon parcours
