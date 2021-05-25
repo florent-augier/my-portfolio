@@ -101,6 +101,9 @@ h4 {
   display: flex;
   justify-content: center;
   overflow: hidden;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 12px;
 }
 
 .card {
