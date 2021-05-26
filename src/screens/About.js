@@ -72,7 +72,7 @@ export default function About() {
             une condition physique prêt à n'importe quel challenge.
           </p>
           <p>
-            Cet environnemnt m'a permis d'élargir mon esprit et de{" "}
+            Cet environnement m'a permis d'élargir mon esprit et de{" "}
             <b className="textBold">devenir une personne bienveillante</b>.
           </p>
           <p>
