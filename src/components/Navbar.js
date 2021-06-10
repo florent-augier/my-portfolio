@@ -2,7 +2,7 @@ import React from "react";
 import { Router, useHistory } from "react-router-dom";
 import "./Navbar.css";
 
-import Video from "./../videos/florentaugier.mp4";
+import logo from "./../images/flowww.svg";
 
 import useWindowSize from "./../helpers/WindowSize";
 
@@ -30,14 +30,22 @@ export default function Navbar() {
     <Router history={history}>
       <nav>
         <ul>
-          {width >= 650 && (
-            <iframe
-              width={width >= 600 ? 250 : 85}
-              height={width >= 600 ? 125 : 40}
-              src={Video}
-              title="logo Florent Augier"
-              style={{ border: "none" }}
-            ></iframe>
+          {width >= 900 && (
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "100px",
+                width: "200px",
+              }}
+            >
+              <img
+                src={logo}
+                alt="Logo Florent Augier Développeur web et mobile"
+                style={{ width: "100%", height: "100%" }}
+              />
+            </div>
           )}
           <li onClick={(e) => goToAbout(e)}>
             Mon parcours

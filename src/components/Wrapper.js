@@ -1,14 +1,16 @@
-import React from "react";
-import Navbar from "../components/Navbar";
+import React, { lazy, Suspense } from "react";
+import { Router, useHistory } from "react-router-dom";
 import "./Wrapper.css";
 
-import { Router, useHistory } from "react-router-dom";
+const Navbar = lazy(() => import("./Navbar"));
 
 export default function Wrapper() {
   let history = useHistory();
   return (
     <Router history={history}>
-      <Navbar />
+      <Suspense fallback={<div>Chargement...</div>}>
+        <Navbar />
+      </Suspense>
     </Router>
   );
 }

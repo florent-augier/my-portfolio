@@ -1,54 +1,39 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import "./App.css";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Sidebar from "./components/Sidebar";
-import Wrapper from "./components/Wrapper";
-import Contact from "./screens/Contact";
-import Projects from "./screens/Projects";
-import About from "./screens/About";
+const Sidebar = lazy(() => import("./components/Sidebar"));
+const Wrapper = lazy(() => import("./components/Wrapper"));
+const Contact = lazy(() => import("./screens/Contact"));
+const Projects = lazy(() => import("./screens/Projects"));
+const About = lazy(() => import("./screens/About"));
 
-import FourOhFour from "./screens/FourOhFour";
-
-// function FourOhFour() {
-//   return (
-//     <div>
-//       <h1>Page non trouvée</h1>
-//       <Link to="/">Revenir à l'accueil</Link>
-//     </div>
-//   );
-// }
+const renderLoader = () => <p>Loading</p>;
 
 function App() {
   return (
-    <Router>
-      <Wrapper />
-      <Sidebar />
+    <Suspense fallback={renderLoader()}>
+      <Router>
+        <Wrapper />
+        <Sidebar />
 
-      <Switch>
-        <Route exact path="/">
-          <Redirect to="/about" />
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/projects">
-          <Projects />
-        </Route>
-        <Route path="*">
-          <FourOhFour />
-        </Route>
-      </Switch>
-    </Router>
+        <Switch>
+          <Route exact path="/">
+            <About />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/projects">
+            <Projects />
+          </Route>
+        </Switch>
+      </Router>
+    </Suspense>
   );
 }
 
